@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pkill -f \"tsx watch src/index.ts\")",
+      "Bash(npm run *)",
+      "Bash(disown)",
+      "Read(//private/tmp/**)",
+      "Bash(curl -s \"http://localhost:4000/api/history/AAPL?range=6mo\")",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:4000/api/quote/AAPL --max-time 5)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:5173 --max-time 5)",
+      "Bash(node scripts/validate_palette.js \"#3987e5,#d95926,#199e70,#c98500,#d55181,#008300,#9085e9,#e66767\" --mode dark --surface \"#12151B\")"
+    ]
+  }
+}
